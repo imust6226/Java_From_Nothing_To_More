@@ -1,7 +1,7 @@
 package enumConstant;
 
 public class enumArray {
-
+//定义一个枚举 constants
 	enum constants{
 		constants_A(100),
 		constants_B("我是枚举成员constants_B"),
