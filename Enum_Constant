@@ -1,0 +1,63 @@
+package Enumeration;
+
+/*
+ * 接口，并使用枚举实现接口中的方法
+ * */
+interface doit{
+	public String getDescription();
+	public int  getNumber();
+}
+
+public enum Enum_Constant implements doit {
+	
+	//每个枚举成员都需要实现这些构造方法
+	constants_A{
+		int i = 10;
+		String description = "我是枚举 constants_A";
+		public String getDescription(){
+			return this.description;
+		}
+		public int getNumber(){
+			return this.i+1;
+		}
+	},
+	constants_B{
+		int i =100;
+		String description = "我是枚举 constants_B";
+		public String getDescription(){
+			return this.description;
+		}
+		public int getNumber(){
+			return this.i+1;
+		}	
+	},
+	constants_C{
+		int i =1000;
+		String description = "我是枚举 constants_C";
+		public String getDescription(){
+			return this.description;
+		}
+		public int getNumber(){
+			return this.i+1;
+		}	
+	},
+	constants_D{
+		String description = "我是枚举 constants_D";
+		public String getDescription(){
+			return this.description;
+		}
+		public int getNumber(){
+			return 1+num;
+		}	
+	};
+	public static int num = 1999;
+	public static void main(String [] args){
+		Enum_Constant [] con = Enum_Constant.values();
+		for(int i=0;i<con.length;i++){
+			System.out.println("第"+i+"个是\t"+con[i].getDescription());
+			System.out.println("第"+i+"个是\t"+con[i].getNumber());
+			
+		}
+	}
+	
+}
